@@ -1,0 +1,7 @@
+- name: Use UTF-8
+  hosts: vagrant
+  user: vagrant
+  sudo: yes
+  tasks:
+    - name: Make sure the system encoding is utf-8
+      template: src=templates/locale dest=/etc/default/locale owner=root group=root mode=644
